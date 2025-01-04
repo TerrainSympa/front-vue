@@ -1,0 +1,10 @@
+.idea
+.ipynb_checkpoints
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.env.prod
+.env.fulldev
+.env.dev

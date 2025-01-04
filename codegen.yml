@@ -1,0 +1,15 @@
+schema: http://localhost:4000/graphql
+documents: ./src/**/*.graphql
+generates:
+  ./src/types.ts:
+    config:
+      scalars:
+        GeoJSONMultiPolygonScalar: MultiPolygon
+        GeoJSONLineStringScalar: MultiLineString
+        GeoJSONPointScalar: Point
+    plugins:
+      - add:
+          content: 'import {MultiPolygon, Point, MultiLineString} from "geojson";'
+      - typescript
+      - typescript-operations
+      - typescript-vue-apollo

@@ -1,0 +1,71 @@
+query myTest {
+    test
+}
+
+query search(
+  $parcelle: ParcelleSearchArgs,
+  $forest: ForestSearchArgs,
+  $building: BuildingSearchArgs,
+  $river: RiverSearchArgs,
+  $searchingArea: AreaInput,
+  $pagination: PaginationArgs) {
+  search(parcelle: $parcelle, forest: $forest, building: $building, river: $river, searchingArea: $searchingArea, pagination: $pagination) {
+    gid
+    idu
+    area
+    geom
+    center
+  }
+}
+
+query pick($coords: LatLng!) {
+  pick(coords: $coords) {
+    gid
+    idu
+    area
+    geom
+    center
+  }
+}
+
+query searchParams {
+  searchParameters {
+    forestType {
+      idForest: id
+      label
+      description
+    }
+    forestEssence {
+      idForest: id
+      label
+      description
+    }
+    buildingType {
+      idBuilding: id
+      label
+      description
+    }
+    buildingUsage {
+      idBuildingUsage: id
+      description
+      label
+    }
+    buildingCondition {
+      idBuildingCondition: id
+      label
+      description
+    }
+    pluType {
+      idPlu: id
+      label
+      description
+    }
+  }
+}
+
+query CommunesList {
+  communesList {
+    gid
+    full_name
+  }
+}

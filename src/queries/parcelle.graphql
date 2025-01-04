@@ -1,0 +1,71 @@
+query parcelle($idu: String!) {
+  parcelle(idu: $idu) {
+    __typename
+    gid
+    center
+    idu
+    geom
+    center
+    area
+    areaBuilding
+    areaBuildingPercentage: areaBuilding(type: Percentage)
+    areaForest
+    areaForestPercentage: areaForest(type: Percentage)
+    areaPlu
+    areaPluPercentage: areaPlu(type: Percentage)
+    riverLength
+    commune {
+      full_name
+      email
+      numero
+      site
+    }
+    inside {
+      __typename
+      gid
+      ... on BuildingInParcelle {
+        gid
+        usage1
+        usage2
+        dateConstruction
+        leger
+        etat
+        nature
+        materialRoof
+        materialWall
+        origin
+        nbFloor
+        nbHousing
+        height
+        polygonGeom: geom
+        parcelleGid
+        area
+      }
+      ... on RiverInParcelle {
+        gid
+        toponyme
+        importance
+        lineStringGeom: geom
+        parcelleGid
+        length
+      }
+      ... on ForestInParcelle {
+        gid
+        type
+        essence
+        essence1
+        essence2
+        composition
+        polygonGeom: geom
+        parcelleGid
+        area
+      }
+      ... on PluInParcelle {
+        libelle
+        area
+        polygonGeom: geom
+        libelong
+      }
+    }
+  }
+}
