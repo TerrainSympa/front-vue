@@ -60,6 +60,7 @@
           </q-card-section>
 
           <q-card-section class="col q-pt-none">
+            <p style="color:red">⚠️ <strong>La base de donnée est actuellement en cours de conception. Les données actuelles sont fictives.</strong>⚠️ </p>
             <p><strong>terrainsympa.fr</strong> est un moteur de recherche de parcelles cadastrales en France.</p>
 
             <p class="text-justify">L'objectif de ce site est de vous offrir tout les outils nécessaire pour trouver votre terrain sympa, que ce soit pour rechercher une parcelle qui correspond à vos besoin ou pour trouver la parcelle d'une annonce immobilière par exemple.</p>
@@ -130,7 +131,7 @@
               Tout les dons serviront exclusivement à la maintenance et à l'amélioration du site, que se soit pour des nouvelles fonctionnalités ou pour l'ajout de nouveaux département dans la recherche.
             </p>
             <p class="text-justify">
-              Un autre moyen de soutenir le projet est d'en parler autour de vous ! C'est tout aussi important que l'aide financière !
+              Un autre moyen de soutenir le projet est d'en parler autour de vous !
             </p>
             <p>L'équipe vous remercie !</p>
             <img
